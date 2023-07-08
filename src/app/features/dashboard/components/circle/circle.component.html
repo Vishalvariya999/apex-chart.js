@@ -1,0 +1,18 @@
+<div class="card rounded shadow p-3" style="border: none">
+  <div class="card-header">
+    <h5 class="h5 p-2">Circle Charts</h5>
+  </div>
+  <div class="card-content">
+    <div id="chart">
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [plotOptions]="chartOptions.plotOptions"
+        [labels]="chartOptions.labels"
+        [legend]="chartOptions.legend"
+        [colors]="chartOptions.colors"
+        [responsive]="chartOptions.responsive"
+      ></apx-chart>
+    </div>
+  </div>
+</div>

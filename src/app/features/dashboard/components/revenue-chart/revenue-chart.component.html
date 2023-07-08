@@ -1,0 +1,49 @@
+<div class="card rounded shadow p-3" style="border: none">
+  <div class="card-header">
+    <div class="d-flex justify-content-between">
+      <h5 class="h5 p-2">Revenue Chart</h5>
+      <div class="p-2">
+        <button
+          (click)="updateOptions('1m')"
+          [class.active]="activeOptionButton == '1m'"
+        >
+          1M
+        </button>
+        <button
+          (click)="updateOptions('6m')"
+          [class.active]="activeOptionButton == '6m'"
+        >
+          6M
+        </button>
+        <button
+          (click)="updateOptions('1y')"
+          [class.active]="activeOptionButton == '1y'"
+        >
+          1Y
+        </button>
+        <button
+          (click)="updateOptions('all')"
+          [class.active]="activeOptionButton == 'all'"
+        >
+          All
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-content">
+    <div id="chart">
+      <apx-chart
+        #chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.dataLabels"
+        [plotOptions]="chartOptions.plotOptions"
+        [yaxis]="chartOptions.yaxis"
+        [legend]="chartOptions.legend"
+        [colors]="chartOptions.colors"
+        [tooltip]="chartOptions.tooltip"
+        [xaxis]="chartOptions.xaxis"
+      ></apx-chart>
+    </div>
+  </div>
+</div>
